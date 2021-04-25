@@ -14,8 +14,7 @@ body {
 }
 
 h1 {
-	animation: typing-text 3s steps(25) infinite alternate, blink 0.3s infinite alternate;
-	overflow: hidden;
+	animation: typing-text 3s steps(25) , blink 0.3s infinite alternate;
 	text-align: center;
 	white-space: nowrap;
 	
@@ -27,7 +26,7 @@ h1 {
 		width: 0;
 	}
 	to {
-		width: 24ch;
+		width: 223ch;
 	}
 }
 
