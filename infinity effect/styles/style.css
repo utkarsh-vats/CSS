@@ -21,7 +21,8 @@ body {
     perspective: 50px;
     z-index: -100;
     overflow: hidden;
-    transition: all 0.1s ease;
+    /* transition: all 0.1s ease; */
+    animation: 10s ease-in-out infinite;
 }
 
 .frame {
@@ -37,7 +38,8 @@ body {
                 0 0 60px #ff00c8, inset 0 0 60px #ff00c8;
     /* box-shadow: 0 0 20px #ffffff, inset 0 0 20px #ffffff,
                 0 0 60px #ff00c8, inset 0 0 60px #ff00c8; */
-    filter: brightness(1.5) contrast(2);
+    filter: brightness(1.5) contrast(3);
+    animation: breathing 3s ease-out infinite;
 }
 
 .content{
@@ -101,4 +103,22 @@ body {
 .btn .btn-preview-image {
     max-width: 100%;
     height: auto;
+}
+
+@keyframes breathing {
+    0% {filter: brightness(1.5) contrast(3);}
+    50% {filter: brightness(1.1) contrast(1.5);}
+    100% {filter: brightness(1.5) contrast(3);}
+}
+
+@keyframes zooming {
+    0% {perspective: 45px;}
+    50% {perspective: 50px;}
+    100% {perspective: 45px;}
+}
+
+@keyframes zooming2 {
+    0% {perspective: 900px;}
+    50% {perspective: 1000px;}
+    100% {perspective: 900px;}
 }

@@ -13,11 +13,13 @@ let factor = 1 / frames.length;
 for(let i = 1; i <= frames.length; i++) {
     // frames[i - 1].style.transform = `rotate(${i * 40}deg) translate3d(${i * tx}px, ${i * ty}px, ${i * tz}px)`;
     frames[i - 1].style.transform = `rotate(${i * 40}deg) translateY(${i * ty}px) translateZ(${i * tz}px) scale(${1 - i * factor})`;
-    frames[i - 1].style.opacity = `${1 - i * factor}`
+    frames[i - 1].style.opacity = `${1 - i * factor}`;
+    frames[i - 1].style.animationDelay = `${i * 0.2 - 0.1}s`;
 }
 
 function spiralBg() {
     container.style.perspective = "50px";
+    container.style.animationName = "zooming";
     for(let i = 1; i <= frames.length; i++) {
         frames[i - 1].style.transform = `rotate(${i * 40}deg) translateY(${i * ty}px) translateZ(${i * tz}px) scale(${1 - i * factor})`;
         frames[i - 1].style.opacity = `${1 - i * factor}`;
@@ -25,7 +27,8 @@ function spiralBg() {
 }
 
 function spiralBg2() {
-    container.style.perspective = "none";
+    container.style.perspective = "900px";
+    container.style.animationName = "zooming2";
     for(let i = 1; i <= frames.length; i++) {
         frames[i - 1].style.transform = `rotate(${i * 25}deg) translateY(${i * ty}px) translateZ(${i * tz}px) scale(${1 - i * factor})`;
         frames[i - 1].style.opacity = `${1 - i * factor}`;
@@ -34,6 +37,7 @@ function spiralBg2() {
 
 function infiniteMirrorBg() {
     container.style.perspective = "50px";
+    container.style.animationName = "zooming";
     for(let i = 1; i <= frames.length; i++) {
         frames[i - 1].style.transform = `rotate(${40}deg) translateY(${i * ty}px) translateZ(${i * tz}px) scale(${1 - i * factor})`;
         frames[i - 1].style.opacity = `${1 - i * factor}`;
@@ -41,7 +45,8 @@ function infiniteMirrorBg() {
 }
 
 function infiniteMirrorBg2() {
-    container.style.perspective = "none";
+    container.style.perspective = "900px";
+    container.style.animationName = "zooming2";
     for(let i = 1; i <= frames.length; i++) {
         frames[i - 1].style.transform = `rotate(${40}deg) translateY(${i * ty}px) translateZ(${i * tz}px) scale(${1 - i * factor})`;
         frames[i - 1].style.opacity = `${1 - i * factor}`;
