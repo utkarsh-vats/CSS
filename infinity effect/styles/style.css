@@ -1,0 +1,97 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    width: 100vw;
+    height: 100vh;
+    background: linear-gradient(90deg, rgba(0, 41, 69, 1) 6%, rgba(53, 0, 56, 1) 29%, rgba(7, 33, 71, 1) 84%);
+}
+
+.container {
+    width: 100vw;
+    height: 100vh;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    perspective: 50px;
+    z-index: -100;
+    overflow: hidden;
+    transition: all 0.1s ease;
+}
+
+.frame {
+    width: 90vmin;
+    height: 90vmin;
+    position: absolute;
+    border-radius: 50px;
+    border: 5px solid #087be6;
+    box-shadow: 0 0 20px #00ccff, inset 0 0 20px #00ccff,
+                0 0 60px #ff00c8, inset 0 0 60px #ff00c8;
+}
+
+.content{
+    position: absolute;
+    width: 100vw;
+    height: 100vh;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    color: white;
+}
+
+.buttons {
+    position: absolute;
+    width: 100px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    top: 3%;
+    right: 3%;
+}
+
+.btns-bg {
+    position: absolute;
+    width: 100px;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.2);
+    filter: blur(2px);
+    border-radius: 15px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.15);
+    z-index: -10;
+}
+
+.btn {
+    width: 50px;
+    height: 50px;
+    background: dodgerblue;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    transition: all 0.2s ease;
+    box-shadow: 0 0 5px rgba(255, 255, 255, 0.5);
+    margin: 10px 0;
+}
+
+.btn:hover {
+    transform: scale(1.05);
+    border: 5px solid rgba(0, 0, 0, 0.15);
+    box-shadow: 0 0 2px white;
+}
+
+.btn:active {
+    transform: scale(0.95);
+    /* box-shadow: 0 0 5px rgba(0, 0, 0, 0.15); */
+    box-shadow: 0 0 5px white;
+}
+
+.btn .btn-preview-image {
+    max-width: 100%;
+    height: auto;
+}
